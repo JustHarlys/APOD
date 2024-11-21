@@ -20,7 +20,8 @@ function PhotoOfTheDay() {
   const img = photoOfTheDay.hdurl;
   const explanation = photoOfTheDay.explanation;
   const title = photoOfTheDay.title;
-  const date = photoOfTheDay.date
+  const date = photoOfTheDay.date;
+  const author = photoOfTheDay.copyright
 
 
   return (
@@ -31,6 +32,7 @@ function PhotoOfTheDay() {
       <h1>Astronomy Picture of the Day</h1>
       <h3>{title}</h3>
       <img src={img} alt="Imagen del día" className="foto"/>
+      <h5>{author === '' ? '' : author}</h5>
       <p className="date">{date}</p>
       <p className="text">{explanation}</p>
       </div>
