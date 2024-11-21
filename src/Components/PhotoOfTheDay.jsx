@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 
 
 
-const API_KEY = 'hReoekRnOI3K9ufCfOpWfbhahlwDQcvVl9RPNexz';
+const API_KEY = import.meta.env.VITE_API_URL;
 
 function PhotoOfTheDay() {
   
