@@ -1,18 +1,16 @@
 /* eslint-disable no-undef */
 import { useEffect, useState } from "react"
 
-
-
-const API_KEY = import.meta.env.VITE_API_URL;
-
 function PhotoOfTheDay() {
   
   const [photoOfTheDay, setPhotoOfTheDay] = useState({});
 
   useEffect(() => {
-    fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`)
+      fetch(`https://api.nasa.gov/planetary/apod?api_key=hReoekRnOI3K9ufCfOpWfbhahlwDQcvVl9RPNexz`)
       .then(response => response.json())
       .then(data => setPhotoOfTheDay(data))
+
+
   }, [])
 
   console.log(photoOfTheDay)
@@ -25,6 +23,8 @@ function PhotoOfTheDay() {
 
 
   return (
+
+    
     <div>
 
       <div className="picture">
